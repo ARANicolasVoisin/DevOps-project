@@ -1,7 +1,6 @@
 ; BIND data file for your.domain.name
-$TTL    604800
-$ORIGIN lab.nvinfo.ovh
-@       IN      SOA     your.domain.name. youremailaddress@domain.com
+$TTL    86400
+@       IN      SOA     ns1.your.domain.name. root.your.domain.name.
                               1         ; Serial
                          604800         ; Refresh
                           86400         ; Retry
@@ -10,4 +9,4 @@ $ORIGIN lab.nvinfo.ovh
 ;
 @               IN      NS      your.domain.name.
 
-servername       IN      A       192.168.1.200
+ns1       IN      A       192.168.1.200
