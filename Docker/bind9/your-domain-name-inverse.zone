@@ -1,1 +1,15 @@
+; reverse map zone file for your.domain.name
+$TTL 2d  ; 172800 seconds
 
+@       IN      SOA     your.domain.name. root.your.domain.name. (
+                                        2003080800 ; serial number
+                                        3h         ; refresh
+                                        15m        ; update retry
+                                        3w         ; expiry
+                                        3h         ; nx = nxdomain ttl
+                                        )
+
+@       IN      NS      ns.your.domain.name.
+
+; Enregistrements DNS de ns1
+1     IN      PTR     ns1.
