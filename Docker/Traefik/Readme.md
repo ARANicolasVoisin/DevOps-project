@@ -6,17 +6,20 @@ Traefil est un reverse proxy se basant sur le nom d'hôte pour donner accès aux
 
 - Création du certificat
 
-`mkdir -p certs
+```
+mkdir -p certs
 openssl req -x509 -nodes -days 365 -newkey rsa:2048 \
   -keyout certs/nomkey.key -out certs/nomcert.crt \
-  -subj "/CN=*.nom.de.domaine"`
+  -subj "/CN=*.nom.de.domaine"
+```
 
 - Création des information
 
-`sudo apt install apache2-utils # Permet d'utiliser htpasswd
+```
+sudo apt install apache2-utils # Permet d'utiliser htpasswd
 sudo htpasswd -nb admin "Password" | sed -e 's/\$/\$\$/g' # mot de passe en clair dans le prompt
 sudo htpasswd -n admin | sed -e 's/\$/\$\$/g' # mot de passe caché
-`
+```
 
 - Docker compose -> Le fichier se trouve dans le repo.
   - Fichier tls.yaml -> fichier qui pointe vers les certificats (changement automatique)
