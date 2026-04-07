@@ -9,7 +9,7 @@ services:
    - "53:53/tcp" # Bind9 a besoin que ce port soit ouvert pour les diverses recherche
    - "53:53/udp"
   volumes:
-   - ./config:/etc/bind
-   - ./cache:/var/cache/bind
+   - ./config:/etc/bind # Fichier de configuration avec les zones
+   - ./cache:/var/cache/bind # Cache DNS
    - ./records:/var/lib/bind
   restart: unless-stopped

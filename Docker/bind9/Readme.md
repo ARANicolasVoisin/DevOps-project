@@ -6,7 +6,7 @@
 
 # Configuration
 
-## FIchiers de configuration 
+## Fichiers de configuration 
 
 - docker-compose.yml -> fichier essentiel pour initialiser le conteneur
 - fichiers de zone (inverse et classique) -> permettent de renseigner les différents postes
