@@ -1,6 +1,6 @@
 # Introduction
 
-Traefil est un reverse proxy se basant sur le nom d'hôte pour donner accès aux ressources se trouvant "derrière". Pour ma config je n'ai pas acheté de nom de domaine, les certificats seront autosignés.
+Traefik est un reverse proxy se basant sur le nom d'hôte pour donner accès aux ressources se trouvant "derrière". Pour ma config je n'ai pas acheté de nom de domaine, les certificats seront autosignés.
 
 # Étapes de création
 
