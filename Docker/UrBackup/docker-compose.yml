@@ -10,23 +10,23 @@ services:
         - /folder/on/the/server/urbackup/backups:/backups
     network_mode: "host" 
     environment:
-        - PUID=1030 # The user who's going to use docker
-        - PGID=65536 # The user who's going to use docker
+        - PUID=1030 # L'utilisateur qui va utiliser UrBackup
+        - PGID=65536 # Le groupe de l'utilisateur en question
         - TZ=Europe/Paris
     ports: 
-        - "55413-55415:55413-55415" # Urbackup port => web interface
-        - "35623:35623/udp" # Urbackup port => backup
+        - "55413-55415:55413-55415" # Port UrBackup pour l'interface web
+        - "35623:35623/udp" # Port pout la sauvegarde
 
   nginx:
     image: nginx:latest
     container_name: nginx-reverse-proxy
     restart: unless-stopped
     volumes:
-      - /folder/on/the/server/nginxdefault.conf:/etc/nginx/conf.d/default.conf # Default configuration is necessary to mount
-      - /folder/on/the/server/certs:/etc/nginx/certs:ro # Certificate
+      - /folder/on/the/server/nginxdefault.conf:/etc/nginx/conf.d/default.conf 
+      - /folder/on/the/server/certs:/etc/nginx/certs:ro # Certificats
       - /folder/on/the/server/nginx.conf:/etc/nginx/nginx.conf:ro
     ports:
-      - "55416:55416" # Exemple of the port i choose for the web interface
+      - "55416:55416" # Exemple de port pour l'interface web sécurisée
     depends_on:
       - urbackup
     networks:

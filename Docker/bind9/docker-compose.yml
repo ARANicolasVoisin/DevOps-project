@@ -6,7 +6,7 @@ services:
    - BIND9_USER=root
    - TZ=live-zone
   ports:
-   - "53:53/tcp" # Bind9 need the port 53 in TCP and UDP to be open
+   - "53:53/tcp" # Bind9 a besoin que ce port soit ouvert pour les diverses recherche
    - "53:53/udp"
   volumes:
    - ./config:/etc/bind
