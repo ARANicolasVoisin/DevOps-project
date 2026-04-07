@@ -1,0 +1,4 @@
+tls:
+  certificates:
+    - certFile: /certs/nomcert.crt
+      keyFile:  /certs/nomclé.key
