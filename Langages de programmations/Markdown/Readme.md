@@ -39,8 +39,6 @@ Texte **gras**, *italique*, `code`, ~barré~
 - [ ] Tâche à faire
 - [ ] Autre tâche
 
-> Citation importante
-
 [Texte du lien](https://url.com)
 [Texte du lien](https://url.com "Titre au survol")
 
