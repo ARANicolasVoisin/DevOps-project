@@ -1,5 +1,24 @@
 # Docker
 
+- [Docker](#docker)
+  - [Création d'un conteneur](#création-dun-conteneur)
+    - [Utilisation d'une image déjà faite](#utilisation-dune-image-déjà-faite)
+    - [Dockerfile.yaml](#dockerfileyaml)
+    - [Docker-compose.yaml](#docker-composeyaml)
+  - [Commande diverses](#commande-diverses)
+  - [Mapper un dossier ou un fichier](#mapper-un-dossier-ou-un-fichier)
+    - [Mapper un volume](#mapper-un-volume)
+    - [Manager un volume](#manager-un-volume)
+    - [Monter sur le conteneur](#monter-sur-le-conteneur)
+  - [Tagger une image](#tagger-une-image)
+  - [Utilisation d'un cloud](#utilisation-dun-cloud)
+    - [Connexion au cloud](#connexion-au-cloud)
+    - [Envoi d'une image dans le cloud](#envoi-dune-image-dans-le-cloud)
+  - [Docker swarm](#docker-swarm)
+    - [Initialisation](#initialisation)
+    - [Déployer service](#déployer-service)
+    - [Intéragir avec les noeuds](#intéragir-avec-les-noeuds)
+
 ## Création d'un conteneur
 
 ### Utilisation d'une image déjà faite
@@ -38,7 +57,7 @@ CMD npm run start	# Celle-ci permet à notre conteneur de savoir quelle commande
 docker build -t <nom du conteneur> <chemin vers le dockerfile>
 ```
 
-### Docker.compose.yaml
+### Docker-compose.yaml
 
 Permet de démarrer plusieurs conteneur en un fichier de conf.
 
@@ -121,15 +140,13 @@ Si ce n'est pas fait dans le docker compose.
 docker run -it -v (comme volume) <chemin dossier physique>:<chemin du dossier du conteneur> <nom image>
 ```
 
-## Manager un volume
+### Manager un volume
 
 Il se comporte de la façon suivante :
 
 - volume vide + dossier conteneur plein => fichiers du conteneur vont dans volume
 - volume plein + dossier conteneur vide => fichiers du volume vont dans le dossier du conteneur
 - volume plein + dossier conteneur plein => fichiers du volume écrase dossier du conteneur
-
-### Manager 
 
 ```bash
 docker volume create <nom du volume>	# permet de créé le volume
@@ -157,7 +174,7 @@ docker image tag SOURCE_IMAGE[:TAG] TARGET_IMAGE[:TAG]
 # ghcr.io/<nomutilisateur/<dossier> si il y en a un /<nom de l'image>:tag
 ```
 
-## Utilisation d'un clou
+## Utilisation d'un cloud
 
 ### Connexion au cloud
 
@@ -223,7 +240,7 @@ docker service create \
   <IMAGE>
 ```
 
-### Inéragir avec les noeuds
+### Intéragir avec les noeuds
 
 Les noeuds ont 3 états :
 
