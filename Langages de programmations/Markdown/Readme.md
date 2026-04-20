@@ -1,7 +1,5 @@
 # Markdown
 
-[[_TOC_]]
-
 ## Introduction 
 
 - Très utile pour la documentation 
