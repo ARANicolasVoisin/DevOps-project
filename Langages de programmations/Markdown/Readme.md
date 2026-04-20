@@ -39,4 +39,5 @@ Texte **gras**, *italique*, `code`, ~barré~
 ```bash
 echo "bloc de code"
 ```
+
 ```
