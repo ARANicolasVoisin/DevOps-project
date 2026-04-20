@@ -35,9 +35,4 @@ Texte **gras**, *italique*, `code`, ~barré~
 
 ![Texte alternatif](chemin/image.png)
 ![Alt](image.png "Légende")
-
-```bash
-echo "bloc de code"
-```
-
 ```
