@@ -245,4 +245,4 @@ copy running-config usbflash0:
 
 ### Ressources
 
-- Réinitialiser un switch Cisco 2960 : https://linux-note.com/cisco-reinitialiser-un-switch-cisco-2960-aux-reglages-dusine-par-defaut/
+- Réinitialiser un switch Cisco 2960 : [Ici](https://linux-note.com/cisco-reinitialiser-un-switch-cisco-2960-aux-reglages-dusine-par-defaut/)
