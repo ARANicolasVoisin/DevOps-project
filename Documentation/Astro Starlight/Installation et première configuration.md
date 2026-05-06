@@ -22,7 +22,7 @@ cd nom-du-projet
 npm run dev
 ```
 
-Une fois cette commander effectuée, il est possible d'accéder au rendu via ce lien : (http://localhost:4321/)
+Une fois cette commander effectuée, il est possible d'accéder au rendu via ce [lien](http://localhost:4321/)
 
 ## Configuration de base
 
@@ -73,6 +73,17 @@ npm run build
 ```bash
 npm run preview
 ```
+
+### Utiliser les composants Starlight
+
+Il est possible d'ajouter des composant Starlight pour habiller la page et la rendre plus agréable à lire. Pour se faire il faut utiliser l'extension `.mdx`.
+
+La documentation est sur le [lien suivant](https://starlight.astro.build/components/using-components/)
+
+## Déploiement de la documentation 
+
+Il est possible d'afficher la documentation sur un serveur Nginx en copiant le dossier `dist/` vers le dossier `/var/www/nom-de-la-documentation`.
+Alternativement, il est aussi possible d'afficher ce serveur sur GitHub Pages avec cette [documentation](https://docs.astro.build/guides/deploy/)
 
 ## Lien vers la documentation
 
