@@ -1,22 +1,23 @@
 # Markdown
 
+## Table des matières
+
+- [Markdown](#markdown)
+  - [Table des matières](#table-des-matières)
+  - [Introduction](#introduction)
+  - [Commandes de base](#commandes-de-base)
+    - [Principales](#principales)
+    - [Tableau](#tableau)
+    - [Échappement des caractères spéciaux](#échappement-des-caractères-spéciaux)
+    - [Note en bas de page](#note-en-bas-de-page)
+  - [Arborescence de fichiers / dossiers](#arborescence-de-fichiers--dossiers)
+
 ## Introduction 
 
 - Très utile pour la documentation 
 - Extension : .md ou .mdx
 
 ## Commandes de base
-
-### Table des matières
-
-- [Markdown](#markdown)
-  - [Introduction](#introduction)
-  - [Commandes de base](#commandes-de-base)
-    - [Table des matières](#table-des-matières)
-    - [Principales](#principales)
-    - [Tableau](#tableau)
-    - [Échappement des caractères spéciaux](#échappement-des-caractères-spéciaux)
-    - [Note en bas de page](#note-en-bas-de-page)
 
 ### Principales
 
@@ -77,3 +78,29 @@ Mettre un \ devant pour afficher le caractère
 Voici une affirmation importante[^1].
 [1]: Source de l'affirmation avec lien.
 ```
+
+## Arborescence de fichiers / dossiers
+
+Il est possible de créer des arborescences de fichiers / dossier avec le code suivant :
+```
+.
++-- _config.yml
++-- _drafts
+|   +-- begin-with-the-crazy-ideas.textile
+|   +-- on-simplicity-in-technology.markdown
++-- _includes
+|   +-- footer.html
+|   +-- header.html
++-- _layouts
+|   +-- default.html
+|   +-- post.html
++-- _posts
+|   +-- 2007-10-29-why-every-programmer-should-play-nethack.textile
+|   +-- 2009-04-26-barcamp-boston-4-roundup.textile
++-- _data
+|   +-- members.yml
++-- _site
++-- index.html
+```
+
+Pour avoir quelque chose de plus visuel, il est aussi possible d'installer l'extension **file-tree-generator** sur Visual Studio Code sur le [Lien suivant](https://marketplace.visualstudio.com/items?itemName=Shinotatwu-DS.file-tree-generator).

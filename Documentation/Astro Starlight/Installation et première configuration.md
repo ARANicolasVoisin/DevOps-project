@@ -87,4 +87,5 @@ Alternativement, il est aussi possible d'afficher ce serveur sur GitHub Pages av
 
 ## Lien vers la documentation
 
-(https://starlight.astro.build/components/using-components/)
+[Doc starlight](https://starlight.astro.build/components/using-components/)
+[Doc Astro](https://docs.astro.build/en/tutorial/0-introduction/)
