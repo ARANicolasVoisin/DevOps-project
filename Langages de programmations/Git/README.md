@@ -1,5 +1,26 @@
 # Git
 
+## Table des matière
+
+- [Git](#git)
+  - [Table des matière](#table-des-matière)
+  - [Introduction](#introduction)
+  - [Configurer un projet depuis le début](#configurer-un-projet-depuis-le-début)
+    - [Configurer git](#configurer-git)
+    - [Initialiser le projet](#initialiser-le-projet)
+    - [Changer un token de connexion distant](#changer-un-token-de-connexion-distant)
+    - [État du dépôt git](#état-du-dépôt-git)
+    - [Cloner un dépôt](#cloner-un-dépôt)
+    - [Ajouter un fichier au projet et sauvegarder](#ajouter-un-fichier-au-projet-et-sauvegarder)
+    - [Annuler un ou plusieurs commit](#annuler-un-ou-plusieurs-commit)
+    - [Tagger une branche](#tagger-une-branche)
+    - [Voir les log](#voir-les-log)
+    - [Corrections](#corrections)
+    - [Mettre une mise à jour en cache](#mettre-une-mise-à-jour-en-cache)
+  - [Travailler avec des branches](#travailler-avec-des-branches)
+    - [Cloner un fichier de Git sur le poste local](#cloner-un-fichier-de-git-sur-le-poste-local)
+  - [Fichier .gitignore](#fichier-gitignore)
+
 ## Introduction
 
 Installation de Git : 
