@@ -1,5 +1,20 @@
 # Créer un blog
 
+## Table des matières 
+
+- [Créer un blog](#créer-un-blog)
+  - [Table des matières](#table-des-matières)
+  - [Comprendre les plugins Starlight](#comprendre-les-plugins-starlight)
+  - [Fonctionnalités du plugin blog](#fonctionnalités-du-plugin-blog)
+  - [Installation du plugin](#installation-du-plugin)
+    - [Installer](#installer)
+    - [Configurer le plugin](#configurer-le-plugin)
+    - [Configurer les collection de contenu](#configurer-les-collection-de-contenu)
+    - [Créer les dossier des articles](#créer-les-dossier-des-articles)
+  - [Créer un article](#créer-un-article)
+  - [Configuration des auteurs](#configuration-des-auteurs)
+  - [URL de la documentation](#url-de-la-documentation)
+
 ## Comprendre les plugins Starlight
 
 Ce sont des extensions qui ajoutes des fonctionnalités au site de documentation sans modifier le thème de base. 
@@ -94,10 +109,12 @@ description: Bienvenue sur mon nouvel article
 date: 2026-05-28
 tags: [annonce, nouveau, astro]
 authors: [Nicolas]
+draft: True
 ---
 
 Bienvenu sur mon nouvel article.
 ```
+L'option **draft: True** permet de ne pas afficher l'article dans le blog. Elle est utile si celui-ci est encore en cours d'écriture.
 
 Un fois l'articlé créé, il faut utiliser la commande suivante pour créer les blog : 
 
