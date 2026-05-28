@@ -32,8 +32,8 @@ Texte **gras**, *italique*, `code`, ~barré~
 
 / Liste numéroté 
 1. Premier
-1. Deuxième
-1. Troisième
+2. Deuxième
+3. Troisième
 
 / Task list
 - [x] Tâche terminée
