@@ -1,5 +1,22 @@
 # Installation et première configuration
 
+## Table des matières 
+
+- [Installation et première configuration](#installation-et-première-configuration)
+  - [Table des matières](#table-des-matières)
+  - [Installation sur Debian](#installation-sur-debian)
+    - [Installation de node.js](#installation-de-nodejs)
+    - [Installation d'Astro](#installation-dastro)
+  - [Démarrer le serveur](#démarrer-le-serveur)
+  - [Comprendre la structure du projet](#comprendre-la-structure-du-projet)
+  - [Configuration de base](#configuration-de-base)
+    - [Fichier de configuration](#fichier-de-configuration)
+    - [Ajouter une page](#ajouter-une-page)
+    - [Construire et déployer le site](#construire-et-déployer-le-site)
+    - [Utiliser les composants Starlight](#utiliser-les-composants-starlight)
+  - [Déploiement de la documentation](#déploiement-de-la-documentation)
+  - [Lien vers la documentation](#lien-vers-la-documentation)
+
 ## Installation sur Debian
 
 ### Installation de node.js
@@ -23,6 +40,30 @@ npm run dev
 ```
 
 Une fois cette commander effectuée, il est possible d'accéder au rendu via ce [lien](http://localhost:4321/)
+
+## Comprendre la structure du projet
+
+. Ma documentation
++-- _.vscode/
++-- _public/
+|   +-- _favicon.svg
++-- _src/
+|   +-- _assets/
+|   +-- _content/
+|       +-- _docs/
+|               +-- _guides/
+|                       +-- _exemple.md
+|               +-- _reference
+|               +-- _index.mdx
++-- _.gitignore
++-- _astro.config.mjs
+
+Voici ce que contien chaque élément important de cette structure : 
+- **public/** : les fichiers statiques accessibles directement par URL.
+- **src/** : le code source du site.
+  - **assets/** : stocke les images et médias qui seront optimisés par Astro
+  - **content/docs/** : les pages de documentation par catégorie (guides/, reference/, ...)
+- **astro.config.mjs** : Le cerveau du projet. Il défini le site, la structure de la barre de navigation, ...
 
 ## Configuration de base
 
@@ -63,7 +104,7 @@ export default defineConfig({
 Ajouter un fichier .md ou .mdx dans /src/content/docs. Par exemple un fichier **src/content/docs/guides/installation.md** sera accessible à l’adresse **/guides/installation/**.
 Chaque page commence par un **frontmatter** — un bloc de métadonnées encadré par trois tirets. Ces informations permettent à Starlight de générer le titre et la description de la page.
 
-### Construir et déployer le site
+### Construire et déployer le site
 
 - Créer la version finale après modification de fichiers :
 ```bash
