@@ -43,20 +43,20 @@ Une fois cette commander effectuée, il est possible d'accéder au rendu via ce 
 
 ## Comprendre la structure du projet
 
-. Ma documentation
-+-- _.vscode/
-+-- _public/
-|   +-- _favicon.svg
-+-- _src/
-|   +-- _assets/
-|   +-- _content/
-|       +-- _docs/
-|               +-- _guides/
-|                       +-- _exemple.md
-|               +-- _reference
-|               +-- _index.mdx
-+-- _.gitignore
-+-- _astro.config.mjs
+Ma documentation
+├── .vscode/
+├── public/
+|   ├── _favicon.svg
+├── _src/
+|   ├── assets/
+|   ├── content/
+|       └── docs/
+|               └── guides/
+|                       └── exemple.md
+|               ├──reference
+|               └── index.mdx
+├──.gitignore
+└── astro.config.mjs
 
 Voici ce que contien chaque élément important de cette structure : 
 - **public/** : les fichiers statiques accessibles directement par URL.
