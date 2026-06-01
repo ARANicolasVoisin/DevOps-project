@@ -2,6 +2,19 @@
 
 ## Table des matières
 
+- [Créer une collection de postmortem](#créer-une-collection-de-postmortem)
+  - [Table des matières](#table-des-matières)
+  - [Introduction](#introduction)
+  - [Confuguration à mettre en place](#confuguration-à-mettre-en-place)
+  - [Créer un schéma Zod](#créer-un-schéma-zod)
+    - [Comprendre le schéma](#comprendre-le-schéma)
+    - [Détail des champs](#détail-des-champs)
+    - [Créer le dossier des postmortems](#créer-le-dossier-des-postmortems)
+    - [Valider que le schéma fonctionne](#valider-que-le-schéma-fonctionne)
+  - [Script de génération](#script-de-génération)
+  - [Configurer la sidebar](#configurer-la-sidebar)
+    - [Explications](#explications)
+
 ## Introduction
 
 Les postmortems sont essenciels pour documenter les incidents qui surviennent, ils permettent de faire un suivi sur les causes et les résolutions.
@@ -125,3 +138,48 @@ Si il n'y a pas d'erreur après la commande `npm run build` c'est que le fichier
 
 Créer le dossier `scripts` sous votre projet puis coller le script create-postmortem.js.
 Rendre le script exécutable `chmod +x scripts/create-postmortem.js` et utilisez la commande suivante pour l'exécuter : `node scripts/create-postmortem.js`.
+Vérifier la présence postmortem avant de build la configuration.
+
+## Configurer la sidebar
+
+Éditez `astro.config.mjs`
+
+```mjs
+export default defineConfig({
+  site: 'https://example.com',
+  integrations: [
+    starlight({
+      title: 'My Docs',
+      sidebar: [
+        {
+          label: 'Guides',
+          items: [
+            { label: 'Example Guide', slug: 'guides/example' },
+          ],
+        },
+        {
+          label: 'Reference',
+          autogenerate: { directory: 'reference' },
+        },
+        // Ajouter la section SRE
+        {
+          label: 'SRE',
+          collapsed: false,
+          items: [
+            { label: 'Postmortems', autogenerate: { directory: 'postmortems' } },
+            { label: 'Métriques & SLO', slug: 'sre/metriques-slo' },
+            { label: 'Observabilité', slug: 'sre/observabilite' },
+            { label: 'Runbooks', slug: 'sre/runbooks' },
+          ],
+        },
+      ],
+    }),
+  ],
+});
+```
+
+### Explications
+
+- `autogenerate: { directory: 'postmortems' }` : Génère automatiquement un lien pour chaque fichier dans `src/content/docs/postmortems`.
+- `collapsed: false` : section SRE ouverte par défaut
+- Les autres lien point vers les pages nommées.
