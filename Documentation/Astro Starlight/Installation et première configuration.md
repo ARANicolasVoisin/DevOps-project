@@ -1,6 +1,6 @@
 # Installation et première configuration
 
-## Table des matières 
+## Table des matières
 
 - [Installation et première configuration](#installation-et-première-configuration)
   - [Table des matières](#table-des-matières)
@@ -24,15 +24,16 @@
 ```bash
 sudo apt install nodejs npm
 ```
-Une fois installer, il est nécessaire d'avoir nodejs en version 22 pour pouvoir faire fonctionner l'application. Pour ce faire, il est nécessaire de visiter ce [lien](https://nodejs.org/fr/download) pour avoir la documentation de la version nécessaire. 
 
-### Installation d'Astro 
+Une fois installer, il est nécessaire d'avoir nodejs en version 22 pour pouvoir faire fonctionner l'application. Pour ce faire, il est nécessaire de visiter ce [lien](https://nodejs.org/fr/download) pour avoir la documentation de la version nécessaire.
+
+### Installation d'Astro
 
 ```bash
 npm create astro@latest -- --template starlight
 ```
 
-## Démarrer le serveur 
+## Démarrer le serveur
 
 ```bash
 cd nom-du-projet
@@ -43,7 +44,6 @@ Une fois cette commander effectuée, il est possible d'accéder au rendu via ce 
 
 ## Comprendre la structure du projet
 
-```
 Ma documentation
 ├── .vscode/
 ├── public/
@@ -58,9 +58,9 @@ Ma documentation
 |               └── index.mdx
 ├──.gitignore
 └── astro.config.mjs
-```
 
-Voici ce que contien chaque élément important de cette structure : 
+Voici ce que contien chaque élément important de cette structure :
+
 - **public/** : les fichiers statiques accessibles directement par URL.
 - **src/** : le code source du site.
   - **assets/** : stocke les images et médias qui seront optimisés par Astro
@@ -69,7 +69,7 @@ Voici ce que contien chaque élément important de cette structure :
 
 ## Configuration de base
 
-### Fichier de configuration 
+### Fichier de configuration
 
 Pour se faire, il est nécessaire de modifier le fichier nom-du-projet/astro.config.mjs.
 
@@ -101,7 +101,8 @@ export default defineConfig({
         ],
 });
 ```
-### Ajouter une page 
+
+### Ajouter une page
 
 Ajouter un fichier .md ou .mdx dans /src/content/docs. Par exemple un fichier **src/content/docs/guides/installation.md** sera accessible à l’adresse **/guides/installation/**.
 Chaque page commence par un **frontmatter** — un bloc de métadonnées encadré par trois tirets. Ces informations permettent à Starlight de générer le titre et la description de la page.
@@ -109,10 +110,13 @@ Chaque page commence par un **frontmatter** — un bloc de métadonnées encadr�
 ### Construire et déployer le site
 
 - Créer la version finale après modification de fichiers :
+
 ```bash
 npm run build
 ```
-- Prévisualiser le site 
+
+- Prévisualiser le site
+
 ```bash
 npm run preview
 ```
@@ -123,7 +127,7 @@ Il est possible d'ajouter des composant Starlight pour habiller la page et la re
 
 La documentation est sur le [lien suivant](https://starlight.astro.build/components/using-components/)
 
-## Déploiement de la documentation 
+## Déploiement de la documentation
 
 Il est possible d'afficher la documentation sur un serveur Nginx en copiant le dossier `dist/` vers le dossier `/var/www/nom-de-la-documentation`.
 Alternativement, il est aussi possible d'afficher ce serveur sur GitHub Pages avec cette [documentation](https://docs.astro.build/guides/deploy/)
