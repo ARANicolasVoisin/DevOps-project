@@ -5,6 +5,7 @@
 - [Markdown](#markdown)
   - [Table des matières](#table-des-matières)
   - [Introduction](#introduction)
+  - [Extensions vscode intéressantes à installer](#extensions-vscode-intéressantes-à-installer)
   - [Commandes de base](#commandes-de-base)
     - [Principales](#principales)
     - [Tableau](#tableau)
@@ -12,10 +13,17 @@
     - [Note en bas de page](#note-en-bas-de-page)
   - [Arborescence de fichiers / dossiers](#arborescence-de-fichiers--dossiers)
 
-## Introduction 
+## Introduction
 
-- Très utile pour la documentation 
+- Très utile pour la documentation
 - Extension : .md ou .mdx
+
+## Extensions vscode intéressantes à installer
+
+- **Markdown all in one**
+  - Faire des tableaux automatiquement, mettre en gras et italique avec un combo de touches
+- **:emojisense:**
+  - Très utile pour mettre des emojis dans un doc en entrant juste :
 
 ## Commandes de base
 
@@ -63,16 +71,18 @@ ___
 | Gauche    | Centré    | Droite    |
 | Données   | Données   | Données   |
 ```
+
 **Alignement**
+
 - `:---` aligné à gauche (défaut)
 - `:...:` centré
 - `--:` aligné à droite
 
 ### Échappement des caractères spéciaux
 
-Mettre un \ devant pour afficher le caractère 
+Mettre un \ devant pour afficher le caractère
 
-### Note en bas de page 
+### Note en bas de page
 
 ```mk
 Voici une affirmation importante[^1].
