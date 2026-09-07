@@ -17,6 +17,7 @@
 
 - Très utile pour la documentation
 - Extension : .md ou .mdx
+- Possibilité de l'imprimer via l'extension **Edge Github Markdown Printer** [Extension](https://microsoftedge.microsoft.com/addons/detail/github-markdown-printer/ghpcnjjikhdoffpbfhgonbdhenmeckjh)
 
 ## Extensions vscode intéressantes à installer
 
